@@ -1,0 +1,52 @@
+--
+
+. computing the spring constant from geometry and material information
+ . from here(http://www.engineersedge.com/spring_comp_calc_k.htm) the spring constant is given by:
+  . k = (G * (d^4)) / (8 * D^3 * Na) * 10^6 where
+   . k the spring constant, in N.m^-1
+   . G the material shear modulus, in GPa
+   . d the wire diameter, in mm
+   . D the spring nominal coil diameter, in mm
+   . Na the number of active coils turn count
+
+ . the shear modulus is related to the young modulus by the formula
+  . E = 2 * G * (1 + V) where
+   . E the young modulus, in GPa
+   . G the shear modulus, in GPa
+   . V the poisson ratio
+  . for the Zinc material
+   . E = 78
+   . G = 29.3
+   . V = 0.331
+
+ . in our case
+  . compression spring
+   . G = 29.3
+   . d = 0.3
+   . D = 8.2
+   . Na = 10
+   . k = 17.6
+  . extraction spring
+   . G = 29.3
+   . d = 0.7
+   . D = 6
+   . Na = 19
+   . k = 
+
+. http://mathforum.org/library/drmath/view/62876.html
+
+. spring computations
+ . http://www.efunda.com/DesignStandards/springs/spring_frequency.cfm
+ . http://www.efunda.com/DesignStandards/springs/spring_design.cfm
+ . http://www.efunda.com/designstandards/springs/calc_comp_designer.cfm#calc
+ . http://www.efunda.com/designstandards/springs/calc_comp_designer_eqn.cfm
+ . http://en.wikipedia.org/wiki/Young%27s_modulus
+ . http://en.wikipedia.org/wiki/Poisson's_ratio
+ . http://en.wikipedia.org/wiki/Shear_modulus
+ . http://engineersedge.com/spring_comp_calc_k.htm
+
+
+-- catapul designs
+ . http://delphiforfun.org/programs/catapult.htm
+  . this one allows for an axe to block the arm. holes are made in a set of
+  precomputed angles, allowing to choose the angle at which the arm will stop
