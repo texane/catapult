@@ -2,6 +2,8 @@
 
 PLOT_CMD="gnuplot -e \""
 
+[ -d ../dat ] || mkdir ../dat ;
+
 FU='plot' ;
 for a in 10 20 30 50 60 70 80; do
     ./a.out $a > ../dat/out.$a ;
